@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial_scale=150">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='CSS/show_booking.css')}}"/>
+        <title>Ticket Book Page</title>
+    </head>
+    <body>
+        <header>
+            <div class="header_content">
+                <div class="left_align">
+                    <a href="{{url_for("home")}}"><img class="logo" src="/static/image/logo.png"></a>
+                    <a href="#"><input class="search" placeholder=" &#xf002  Search for Movies,Events.. " style="font-family: FontAwesome;"></a>
+                </div>
+                <div class="right_align">
+                    <p class="user" > Welcome {{user}}
+                    <a href="{{url_for("logout")}}"><button>Logout</button></a></p>
+                </div>
+            </div>
+        </header>
+        <div class="black_background">
+            <div class="image-background">
+                <img class="background" src="../{{show["show_image_path"]}}">
+                <img class="main_img" src="../{{show["show_image_path"]}}">
+                <p class="show_name">{{show["show_name"]}}</p>
+                <div class="rating">
+                    <form method="POST" action="{{url_for("add_rating", id=show["show_id"])}}">
+                        <input type="number" min="1" max="5" required="True" name="rating" placeholder="rate movie from 1 to 5" class="rating_box"> <br>
+                        <input type="submit" name="/Go" class="rating_submit">
+                    </form>
+                </div>
+                <div class="about_movie">
+                    <p class="past_rating"><i class="bi bi-star-fill" style="color: rgb(226, 107, 107);"></i>{{rate_template}} </p>
+                    <p class="duration">{{show["show_duration"]}}</p>
+                    <p class="language">{{show["show_lang"].upper()}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="movie_discription">
+            <h3>About the Show</h3>
+            <p class="discription"> {{show["show_discription"].capitalize()}}</p>
+        <p><b>Venues:</b>
+            {% for venue_with_place in venue_with_places %}
+                        {{venue_with_place[1]}},
+            {% endfor %}
+        </p>    
+        </div>
+        <hr>
+        <div class="footer">
+            {% if no_show == False %}
+                {% if check_availablity == True %}
+                <form method="POST" action="{{url_for("check_availablity", id = show_id)}}">
+                    <span id="total_cost"></span>
+
+                    <select class="select" required="True" name="show_venue_id">
+                        <option>Select Venue</option>
+                        {% for venue_with_place in venue_with_places %}
+                        <p>{{venue_with_place}}</p>
+                            <option value="{{venue_with_place[0]}}" id="{{venue_with_place[0]}}">{{venue_with_place[1]}}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" name="/Go" class="book_button">Check Availablity</button>
+                </form>
+                {% endif %}
+                {% if take_booking == True %}
+                    <form method="POST" class="book_ticket" action="{{url_for("book_ticket", id = show_venue_id)}}">
+                        <span id="seat_left">Hurry Up!!! Only<span class="seat_left_and_price"><b>{{no_of_seats_left}}</b></span> left.</span>
+                        <input type="number" min="1" max="{{max}}"required="True" name="no_of_ticket" class="no_of_ticket">
+                        <button type="submit" name="/Go" class="book_button" >Book Ticket</button>
+                    </form>
+                {% endif %}
+            {% elif no_show == True %}
+                <p class="comming_soon">Coming Soon</p>
+            {% endif %}
+            <p class="comming_soon">House Full</p>
+        </div>
+    </body>
+</html>

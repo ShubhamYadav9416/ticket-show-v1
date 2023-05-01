@@ -1,0 +1,172 @@
+body,html,main,.main_content{
+    height: 100%;
+    background-color: rgb(239, 240, 241);
+}
+body{
+    background-color: rgb(239, 240, 241);
+    zoom: 100%;
+
+}
+header{
+    background-color: rgb(51, 53, 69);
+    overflow: hidden;
+    height: 60px;
+    width: 100%;
+}
+
+.header_content{
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.left_align{
+    float: left;
+    margin-top: 15px;
+}
+
+.logo{
+    width: auto;
+    height: 20px;
+}
+
+
+.right_align{
+    float: right;
+    margin-top: 15px;
+}
+
+.right_align button{
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(234, 76, 76);
+    color: white;
+    border-width: 0;
+    border-radius: 0.2em;
+    margin-left: 10px;
+}
+
+.right_align p{
+    color: antiquewhite;
+}
+
+
+main{
+    background-color: white;
+    /* height: 100%; */
+    width: 100%;
+}
+
+.main_content{
+    background-color: whitesmoke;
+    width: 60%;
+    margin: auto;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.booking_details_box{
+    background-color: rgb(216, 212, 223);
+    border-radius: 0.5em;
+    height: auto;
+    padding: 15px 15px 15px 15px;
+    margin-bottom: 30px;
+}
+
+.booking_details_box img{
+    width: 120px;
+    height: 140px;
+    position: relative;
+}
+
+.booking_details_box_of_past{
+    background-color: rgb(233, 210, 147);
+    border-radius: 0.5em;
+    height: auto;
+    padding: 15px 15px 15px 15px;
+    margin-bottom: 30px;
+}
+
+.booking_details_box_of_past img{
+    width: 120px;
+    height: 140px;
+    opacity: 50%;
+    position: relative;
+}
+.show_name{
+    position: absolute;
+    margin-left: 20px;
+}
+
+.address_and_venue{
+    position: absolute;
+    margin-top: -110px;
+    margin-left: 142px;
+    opacity: 80%;
+}
+
+
+.date_time{
+    position: absolute;
+    margin-top: -85px;
+    margin-left: 142px;
+    opacity: 70%;
+    font-size: 14px
+}
+
+.no_of_ticket{
+    position: absolute;
+    margin-top: -55px;
+    margin-left: 142px;
+    font-size: 15px;
+    opacity: 80%;
+}
+
+.ticket_price{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 142px;
+}
+
+.booking_details_box_of_past hr{
+    border: none;
+    border-top: 1px dotted black;
+    width: 370px;
+    margin-left: 140px;
+    margin-top: 0;
+}
+.booking_details_box hr{
+    border: none;
+    border-top: 1px dotted black;
+    width: 370px;
+    margin-left: 140px;
+    margin-top: 0;
+}
+
+.amount_paid{
+    margin-top: -5px;
+    margin-bottom: -2px;
+}
+
+.total_rupee{
+    font-size: large;
+}
+
+.booking_id{
+    font-size: 12px;
+    margin-bottom: -10px;
+    margin-top: -30px;
+}
+
+.booking_details_box .delete_button{
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 610px;
+    font-size: 25px;
+}
+
+.no_booking{
+    font-family:"Brush Script MT", "Brush Script Std", "cursive";
+}

@@ -1,0 +1,158 @@
+
+body{
+    zoom: 110%;
+}
+
+header{
+    background-color: rgb(51, 53, 69);
+    overflow: hidden;
+    height: 60px;
+    width: 100%;
+}
+
+.header_content{
+    width: 82%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.left_align{
+    float: left;
+    margin-top: 15px;
+}
+
+.logo{
+    width: auto;
+    height: 20px;
+
+}
+
+.search{
+    width: 300px;
+    height: 25px;
+    border-radius: 0.2em;
+    border-width: 0;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+
+.right_align{
+    float: right;
+    margin-top: 15px;
+}
+
+.right_align button{
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(234, 76, 76);
+    color: white;
+    border-width: 0;
+    border-radius: 0.2em;
+    margin-left: 10px;
+}
+
+.right_align p{
+    color: antiquewhite;
+}
+
+i{
+    margin-left: 5px;
+}
+
+p a{
+    text-decoration: none;
+    color: white;
+}
+p a:hover{
+    color: orange;
+}
+.sidebar {
+    height: 100%;
+    width: 200px;
+    margin-top: 100px;
+    margin-left: 15px;
+    position: fixed;
+    overflow-x: hidden;
+}
+
+dl{
+    font-size: 14px;
+}
+dt{
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+.filter_by_location{
+    text-decoration: none;
+    color: black;
+}
+dd{
+    margin-left: 20px;
+    margin-top: -13px;
+    font-weight: 100;
+}
+
+.main{
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    max-width: 2050px;
+}
+
+
+.main_poster{
+    background-color: black;
+    margin-left: -10px;
+    height: 275px;
+    width: 180px;
+    border-radius: 0.3em;
+}
+
+.poster{
+    height: 250px;
+    width: 180px;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+}
+
+.movie_page_link{
+    text-decoration: None;
+    width: 180px;
+}
+
+.rating{
+    color:white;
+    font-size: 12px;
+    margin-top: 4px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.movie_name{
+    color: black;
+    text-align: left;
+    font-size: 15px;
+    margin-left: -10px;
+    margin-top: 6px;
+}
+
+.tags{
+    color: rgb(122, 124, 124);
+    text-align: left;
+    font-size: 15px;
+    margin-left: -10px;
+    margin-top: -15px;
+}
+
+.poster_link_activate{
+    width: 180px;
+    height: 310px;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}

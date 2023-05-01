@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial_scale=150">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='CSS/style_login.css')}}"/>
+        <title>Welcome To Ticket Show </title>
+    </head>
+    <body>
+        {% with messages = get_flashed_messages() %}  
+            {% if messages %}  
+               {% for message in messages %}  
+                    <p class="flash_message">{{ message }}</p>  
+               {% endfor %}  
+            {% endif %}  
+        {% endwith %} 
+        <header>
+            <a href="{{url_for("home")}}">
+                <img class="logo" src="/static/image/logo.png">
+                {% if admin == "True" %}
+                    <a class="admin" href="#">Admin</a>
+                {% endif %}
+            </a>
+        </header>
+        <main>  
+            <center>
+                {% if page=="login"%}
+                    <button type="button" class="current_btn">LOGIN</button>
+                    <a href="{{url_for("register")}}"">
+                    <button type="button" class="other_btn" >REGISTER</button></a>
+                {% elif page=="register" %}
+                    <a href="{{url_for("login")}}">
+                    <button type="button" class="other_btn">LOGIN</button></a>                        
+                    <button type="button" class="current_btn">REGISTER</button>
+                {% elif page=="forget_password" %}
+                    <a href="{{url_for("login")}}">
+                    <button type="button" class="other_btn">LOGIN</button></a>
+                {% endif %}
+                <form class="form" method="POST">
+                    <input type="email" name="email" class="input" placeholder="Email" required="True">
+                    <input type="password" name="password" class="input" placeholder="Password" required="True"><br>
+                    {% if page=="login" %}
+                        <p>
+                            <a href="{{url_for("forget_password")}}">forget password?</a>
+                            <a href="{{url_for("admin_login")}}">admin</a>
+                        </p>
+                    {% endif %}
+                    <button type="submit" class="submit" name="/Go">{{submit_name}}</button> 
+                </form>
+                {% if page=="login" %}
+                    <p>Not a user?<a href="{{url_for("register")}}">Register</a></p>
+                {% endif %}
+            </center>
+        </main>
+    </body>
+</html>

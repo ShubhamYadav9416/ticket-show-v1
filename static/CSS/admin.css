@@ -1,0 +1,261 @@
+body{
+    zoom:175%;
+    background-color: rgb(212, 212, 219);
+}
+.side_bar{
+    float: left;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background-color:#111;
+    overflow-x: hidden;
+}
+.icons a {
+    padding: 8px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+  }
+  
+.side_bar a:hover{
+    color:#f1f1f1;
+}
+
+.logo{
+    width: 120px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.admin{
+    color: red;
+    text-decoration-line: none;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.logout_admin{
+    color: red;
+    margin-left: 30px;
+}
+
+button{
+    background-color: rgb(164, 241, 157);
+    border: none;
+}
+.content{
+    margin-left: 200px;
+    float: left;
+    padding: 20px;
+    width: 800px;
+    align-items: center;
+    /* background-color: white; */
+}
+
+input{
+    width: 500px;
+    margin-top: 10px;
+    border-radius: 0.5em;
+}
+select{
+    width: 500px;
+    margin-top: 10px;
+    border-radius: 0.5em;
+    height: 25px;
+}
+
+.submit{
+    background-color: #818181;
+}
+
+table {
+	border: 1px solid black; 
+	border-collapse: collapse; 
+	text-align: center;	
+    border-radius: .5em;
+    margin-top: 10px;
+}
+
+th{
+    background-color: darkblue;
+    color: white;
+}
+td, th {
+    padding-left: 25px;
+    margin-right: 5px;
+	/* border: 1px solid black; */
+}
+
+td{
+    font-size: 15px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(131, 202, 237);
+}
+tr:nth-child(odd){
+    background-color: whitesmoke;
+}
+h1{
+    font-size: large;
+}
+.add{
+    margin-top: 10px;
+    border-radius: 0.3em;
+    background-color: rgb(164, 236, 175);
+}
+
+.date_input{
+    width: 385px;
+    align-content: center;
+}
+
+
+.past_shows table {
+	border: 1px solid black; 
+	border-collapse: collapse; 
+	text-align: center;	
+    border-radius: .5em;
+    margin-top: 10px;
+}
+
+.past_shows th{
+    background-color: rgb(228, 87, 21);
+    color: white;
+}
+.past_shows td, th {
+    padding-left: 25px;
+    margin-right: 5px;
+	/* border: 1px solid black; */
+}
+
+.past_shows td{
+    font-size: 15px;
+}
+
+.past_shows tr:nth-child(even){
+    background-color: rgb(245, 181, 143);
+}
+
+.dashboard{
+    background-color: rgb(212, 212, 219);
+    margin-left: 200px;
+}
+.dashboard_heading{
+    font-size: 30px;
+    margin-left: 18px;
+}
+.dashboard_heading i{
+    font-size: 18px;
+    opacity: 80%;
+    margin-left: 5px;
+}
+.container{
+    padding-right: 50px;
+}
+.col{
+    margin: 10px;
+    background-color: white;
+}
+
+.dashboard_symbol{
+    background-color: rgb(67, 238, 118);
+    color: white;
+    font-size: 30px;
+    border-radius: 3em;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin-top: 9px;
+}
+.dashboard_highlight_result{
+    color: green;
+    font-weight:500;
+    font-size: 30px;
+    margin-top: 15px;
+}
+.dashboard_highlight_heading{
+    font-size: small;
+    margin-top: -23px;
+    margin-bottom: 3pxpx;
+}
+.summary{
+    background-color: white;
+    margin-left: 22px;
+    margin-right: 47px;
+    height: 180px;
+    text-align: center;
+    padding: 15px;
+}
+
+.summary p{
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-left: -615px;
+}
+.summary_logo{
+    background-color: rgb(67, 238, 118);
+    color: white;
+    font-size: 30px;
+    border-radius: 3em;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin-top: 9px;
+    margin-right: 15px;
+}
+#summaries_result{
+    margin-top: -110px;
+}
+.dashboard_gap{
+    margin-right: 2px;
+}
+.top_three{
+    background-color: white;
+    padding: 5px;
+    width: max-content;
+    margin-left: 15px;
+}
+.top_three tr th{
+    background-color: white;
+    color: black;
+}
+
+.top_three tr td{
+    background-color: white;
+    color: #111;
+}
+
+.dashboard_graphs{
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 22px;
+    margin-right: 47px;
+    margin-bottom: 20px;
+    height: 350px;
+    text-align: center;
+    padding: 15px;
+}
+.dashboard_graph_logo{
+    background-color: rgb(243, 133, 102);
+    color: white;
+    font-size: 30px;
+    border-radius: 3em;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin-top: 9px;
+    margin-right: 15px;
+}
+.dashboard_graphs p{
+    margin-left: -680px;
+    margin-top: 15px;
+}
+.dashboard_graphs img{
+    margin-top: -110px;
+}
+.logout_button{
+    margin-top: 300px;
+}

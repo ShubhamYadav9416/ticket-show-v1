@@ -1,0 +1,95 @@
+body{
+    background-color: white;
+}
+header{
+    background-color: rgb(51, 53, 69);
+    overflow: hidden;
+    height: 60px;
+    width: 100%;
+}
+
+.header_content{
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.left_align{
+    float: left;
+    margin-top: 15px;
+}
+
+.logo{
+    width: auto;
+    height: 20px;
+
+}
+
+
+.right_align{
+    float: right;
+    margin-top: 15px;
+}
+
+.right_align button{
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(234, 76, 76);
+    color: white;
+    border-width: 0;
+    border-radius: 0.2em;
+    margin-left: 10px;
+}
+
+.right_align p{
+    color: antiquewhite;
+}
+.search_center{
+    width: 60%;
+    background-color: white;
+    height: max-content;
+}
+.search{
+    padding-top: 25px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 25px;
+}
+input{
+    width: 80%;
+    height: 40px;
+}
+button{
+    height: 40px;
+}
+.no-bullets{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    width: 68%;
+    height: 40px;
+    padding: 5px;
+    margin: 0;
+}
+li:nth-child(even){
+    background-color: rgb(5, 40, 45);
+}
+li:nth-child(odd){
+    background-color: rgb(235, 231, 231);
+}
+.symbol{
+    position: fixed;
+    margin-left: 25px;
+}
+.result_name{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+i{
+    font-size: 15px;
+}
